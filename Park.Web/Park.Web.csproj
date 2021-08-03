@@ -5,4 +5,10 @@
     <RootNamespace>Web</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Park.Domain\Park.Domain.csproj" />
+    <ProjectReference Include="..\Park.Service.ParkeringA\Park.Service.ParkeringA.csproj" />
+    <ProjectReference Include="..\Park.Service.ParkeringB\Park.Service.ParkeringB.csproj" />
+  </ItemGroup>
+
 </Project>

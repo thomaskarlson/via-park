@@ -1,6 +1,6 @@
 namespace Park.Domain.Interfaces
 {
-    public interface IPerson
+    public class Person : ParkBase
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

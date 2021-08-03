@@ -1,0 +1,21 @@
+﻿@using Park.Domain.Interfaces
+@model Web.ViewModels.Home
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+
+    @foreach (var parkServicesService in Model?.Services)
+    {
+        <h1 class="display-4">@parkServicesService.ServiceName</h1>
+        <b>Biler der har parkeringstilladelse:</b>
+            @foreach (var permit in parkServicesService.GetPermits(new Person() {FirstName = "Thomas", LastName = "Karlson"}))
+            {
+                <p>@permit.Vehicle.Plate</p>    
+            }
+            
+    }
+
+</div>
